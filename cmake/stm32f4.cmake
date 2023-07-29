@@ -156,3 +156,21 @@ function(target_stm32f427xg name)
         ${ARGN}
     )
 endfunction()
+
+set(STM32F407_COMPILE_DEFINITIONS
+    STM32F40_41xxx
+    STM32F407xx
+    MCU_FLASH_SIZE=1024
+)
+
+function(target_stm32f407xg name)
+    target_stm32f4xx(
+        NAME ${name}
+        STARTUP startup_stm32f40xx.s
+        SOURCES ${STM32F4_STDPERIPH_SRC}
+        COMPILE_DEFINITIONS ${STM32F407_COMPILE_DEFINITIONS}
+        LINKER_SCRIPT stm32_flash_f407xg
+        SVD STM32F407
+        ${ARGN}
+    )
+endfunction()
