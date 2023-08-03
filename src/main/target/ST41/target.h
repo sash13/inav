@@ -35,9 +35,9 @@
 
 // *************** SPI2 OSD *****************************
 
-#define USE_MAX7456
-#define MAX7456_SPI_BUS         BUS_SPI2
-#define MAX7456_CS_PIN          PC14
+// #define USE_MAX7456
+// #define MAX7456_SPI_BUS         BUS_SPI2
+// #define MAX7456_CS_PIN          PC14
 
 // *************** SPI FLASH **************************
 
